@@ -1,0 +1,47 @@
+LDmicro0.1
+MICRO=Microchip PIC16F877 40-PDIP
+CYCLE=10000
+CRYSTAL=4000000
+BAUD=2400
+COMPILED=F:\Okul\BATEMCD\Programlar\PIC_PLC\ornekler\KUMES.hex
+
+IO LIST
+    Y1 at 19
+    Y2 at 20
+    Y3 at 21
+    Y4 at 22
+    A1 at 2
+    A2 at 3
+    A3 at 4
+    A4 at 5
+END
+
+PROGRAM
+RUNG
+    READ_ADC A1
+END
+RUNG
+    READ_ADC A2
+END
+RUNG
+    READ_ADC A3
+END
+RUNG
+    READ_ADC A4
+END
+RUNG
+    GRT A1 61
+    COIL Y1 0 0 0
+END
+RUNG
+    GRT A2 61
+    COIL Y2 0 0 0
+END
+RUNG
+    GRT A3 61
+    COIL Y3 0 0 0
+END
+RUNG
+    GRT A4 61
+    COIL Y4 0 0 0
+END

@@ -1,0 +1,51 @@
+LDmicro export text
+for 'Microchip PIC16F876 28-PDIP or 28-SOIC', 20.000000 MHz crystal, 10.0 ms cycle time
+
+
+LADDER DIAGRAM:
+
+   ||                                                                    ||
+   ||       X1                  _             T1               Y1        ||
+ 1 ||-------] [-----------[OSR_/ ]-------[TOF 5.000 s]---------( )-------||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||       X2                  _             T2               Y2        ||
+ 2 ||-------] [-----------[OSR_/ ]-------[TOF 5.000 s]---------( )-------||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||       X3                  _             T3               Y3        ||
+ 3 ||-------] [-----------[OSR_/ ]-------[TOF 5.000 s]---------( )-------||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||       X4                  _             T4               Y4        ||
+ 4 ||-------] [-----------[OSR_/ ]-------[TOF 5.000 s]---------( )-------||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||                                                                    ||
+   ||------[END]---------------------------------------------------------||
+   ||                                                                    ||
+   ||                                                                    ||
+
+
+G/Ç TANIMI:
+
+  Ýsim                       | Tipi               | Bacak
+ ----------------------------+--------------------+------
+  X1                         | Dijital Giriþ      | 21
+  X2                         | Dijital Giriþ      | 22
+  X3                         | Dijital Giriþ      | 23
+  X4                         | Dijital Giriþ      | 24
+  Y1                         | Dijital Çýkýþ      | 16
+  Y2                         | Dijital Çýkýþ      | 15
+  Y3                         | Dijital Çýkýþ      | 14
+  Y4                         | Dijital Çýkýþ      | 13
+  T1                         | Turn-Off Gecikme   | 
+  T2                         | Turn-Off Gecikme   | 
+  T3                         | Turn-Off Gecikme   | 
+  T4                         | Turn-Off Gecikme   | 

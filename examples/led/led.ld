@@ -1,0 +1,24 @@
+LDmicro0.1
+MICRO=Microchip PIC16F88 18-PDIP or 18-SOIC
+CYCLE=10000
+CRYSTAL=8000000
+BAUD=2400
+COMPILED=D:\Fc_primeru\led\led.hex
+
+IO LIST
+    Xb at 1
+    Ya at 15
+    Yb at 17
+END
+
+PROGRAM
+RUNG
+    CONTACTS Ya 1
+    TON Ton 2000000
+    TOF Tof 2000000
+    COIL Ya 0 0 0
+END
+RUNG
+    CONTACTS Xb 0
+    COIL Yb 0 0 0
+END

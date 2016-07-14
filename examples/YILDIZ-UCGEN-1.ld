@@ -1,0 +1,44 @@
+LDmicro0.1
+MICRO=Microchip PIC16F628 18-PDIP or 18-SOIC
+CYCLE=10000
+CRYSTAL=4000000
+BAUD=2400
+COMPILED=F:\Okul\BATEMCD\Programlar\pic-plc_LDMICRO\y-u.hex
+
+IO LIST
+    Xstart at 6
+    Xstop at 7
+    Xtermik at 8
+    YK1 at 10
+    YK2 at 11
+    YK3 at 12
+END
+
+PROGRAM
+RUNG
+    PARALLEL
+        CONTACTS Xstart 0
+        CONTACTS R1 0
+    END
+    CONTACTS Xstop 1
+    CONTACTS Xtermik 1
+    PARALLEL
+        COIL R1 0 0 0
+        COIL YK1 0 0 0
+    END
+END
+RUNG
+    CONTACTS R1 0
+    TON T1 5000000
+    COIL R2 0 0 0
+END
+RUNG
+    CONTACTS R1 0
+    CONTACTS R2 1
+    COIL YK2 0 0 0
+END
+RUNG
+    CONTACTS R1 0
+    CONTACTS R2 0
+    COIL YK3 0 0 0
+END

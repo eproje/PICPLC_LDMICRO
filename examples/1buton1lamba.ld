@@ -1,0 +1,22 @@
+LDmicro0.1
+MICRO=Microchip PIC16F628 18-PDIP or 18-SOIC
+CYCLE=10000
+CRYSTAL=4000000
+BAUD=2400
+COMPILED=F:\Okul\BATEMCD\Programlar\PIC_PLC\ornekler\1butononoff.hex
+
+IO LIST
+    X1 at 9
+    Y4 at 10
+END
+
+PROGRAM
+RUNG
+    CONTACTS X1 0
+    OSR
+    CTC Csay1 1
+END
+RUNG
+    EQU Csay1 1
+    COIL Y4 0 0 0
+END

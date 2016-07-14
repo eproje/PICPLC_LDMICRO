@@ -1,0 +1,24 @@
+LDmicro0.1
+MICRO=Microchip PIC16F628 18-PDIP or 18-SOIC
+CYCLE=10000
+CRYSTAL=20000000
+BAUD=2400
+COMPILED=F:\Okul\BATEMCD\Programlar\PIC_PLC\2butonss.hex
+
+IO LIST
+    X1 at 6
+    X2 at 7
+    Y1 at 10
+END
+
+PROGRAM
+RUNG
+    PARALLEL
+        CONTACTS X1 0
+        SERIES
+            CONTACTS Y1 0
+            CONTACTS X2 1
+        END
+    END
+    COIL Y1 0 0 0
+END
